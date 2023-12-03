@@ -11,7 +11,7 @@
 
 public class MP3Player : IMultimediaDevice
 {
-    public MP3Player(List <string> Songs)
+    public MP3Player(List<string> Songs)
     {
         SongIndex = 0;
         songs = Songs;
@@ -160,8 +160,8 @@ public class Program
     public static void Main()
     {
         List<IMultimediaDevice> devices = new List<IMultimediaDevice>();
-        List<string> songs = new List<string>() { "song1", "song2", "song3"};
-        List<string> videos = new List<string>() { "video1", "video2", "video3"};
+        List<string> songs = new List<string>() { "song1", "song2", "song3" };
+        List<string> videos = new List<string>() { "video1", "video2", "video3" };
         devices.Add(new Radio());
         devices.Add(new DVDPlayer(videos));
         devices.Add(new MP3Player(songs));
@@ -177,7 +177,7 @@ public class Program
             choice = int.Parse(Console.ReadLine());
             MediaService(devices[choice - 1]);
         } while (choice != 0);
-        
+
 
     }
 }
